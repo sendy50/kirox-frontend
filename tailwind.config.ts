@@ -1,0 +1,60 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#1193d4",
+        "background-light": "#f6f7f8",
+        "background-dark": "#101c22",
+        "foreground-light": "#111827",
+        "foreground-dark": "#f9fafb",
+        "card-light": "#ffffff",
+        "card-dark": "#1f2937",
+        "surface-light": "#ffffff",
+        "surface-dark": "#1a2a33",
+        "content-light": "#ffffff",
+        "content-dark": "#1a2a33",
+        "text-light": "#111618",
+        "text-dark": "#e3e8ea",
+        "subtext-light": "#617c89",
+        "subtext-dark": "#94a3b8",
+        "subtle-light": "#6b7280",
+        "subtle-dark": "#9ca3af",
+        "muted-light": "#6b7280",
+        "muted-dark": "#9ca3af",
+        "placeholder-light": "#6b7280",
+        "placeholder-dark": "#9ca3af",
+        "border-light": "#e2e8f0",
+        "border-dark": "#334155",
+        "input-light": "#f1f5f9",
+        "input-dark": "#1e293b",
+        "danger-light": "#ef4444",
+        "danger-dark": "#ef4444",
+        "danger-background-light": "#fee2e2",
+        "danger-background-dark": "rgba(239, 68, 68, 0.1)",
+        "success-light": "#10b981",
+        "success-dark": "#34d399",
+        "success-bg-light": "#f0fdf4",
+        "success-bg-dark": "#166534",
+      },
+      fontFamily: {
+        display: ["Inter", "sans-serif"],
+      },
+      borderRadius: {
+        DEFAULT: "0.5rem",
+        lg: "0.75rem",
+        xl: "1rem",
+        full: "9999px",
+      },
+    },
+  },
+  plugins: [require("@tailwindcss/forms")],
+};
+export default config;
